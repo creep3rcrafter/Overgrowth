@@ -1,5 +1,6 @@
 package creep3rcrafter.overgrowth;
 
+import creep3rcrafter.overgrowth.block.ModBlocks;
 import creep3rcrafter.overgrowth.commands.Commands;
 import creep3rcrafter.overgrowth.common.EventHandler;
 import creep3rcrafter.overgrowth.item.ModItems;
@@ -16,6 +17,7 @@ public class Overgrowth {
 	public Overgrowth() {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		ModItems.register(eventBus);
+		ModBlocks.register(eventBus);
 		eventBus.addListener(this::commonSetup);
 		eventBus.addListener(this::clientSetup);
 		}
