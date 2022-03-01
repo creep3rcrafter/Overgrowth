@@ -33,6 +33,9 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 - Crystal Apple <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/crystal_apple.png">
 - Black Cherry <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/black_cherry.png">
 - Experience Orb <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/experience_orb.png">
+  - when broken drops X amount of levels, can be broken by a piston to drop the fruit and can be thrown on the ground and drop X amount of experience, Grows on Soul Farmland but in order to grow you must plant (Placeholder Plant) and throw a bottle of experience at it and it has a 25% chance of becoming an Experience Plant.
+- Sanguis Fruit:
+  - (Blood Fruit) potion component, When Eaten instantly heals 5 hearts.   
 #### Blocks:
 - Nylium farmland:
   - when crymson nylium or warped nylium is hoed and can be used as farmland for nether crops.
