@@ -11,23 +11,28 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
   - can be used for better enchantment books.
 - Dark Book:
   - when enchanted it returns better enchants than normal.
--Sulfur:
-  - can be used as a fuel and can be used with sugar and charcoal - coal to make gunpowder.
-- Nether Carrot:
+- Sulfur:
+  - can be used as a fuel and can be used with sugar and charcoal or coal to make gunpowder.
+- Nether Carrot: <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/nether_carrot.png">
   - slightly better than an Overworld Carrot, and only grows in Nylium Farmland.
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
-- Nether Beetroot:
+- Nether Beetroot: <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/nether_beetroot.png">
   - slightly better than an Overworld Carrot, and only grows in Nylium Farmland.
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
 - Nether Potato:
   - slightly better than an Overworld Carrot, and only grows in Nylium Farmland.
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
-- End Carrot 
+- End Carrot:
   - slightly better than a Nether Carrot, and only grows in End Soil Farmland.
-- End Beetroot 
+- End Beetroot:
   - slightly better than an Nether Carrot, and only grows in End Soil Farmland.
-- End Potato 
+- End Potato:
   - slightly better than a Nether Carrot, and only grows in End Soil Farmland.
+- charmelon <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/nether_melon_slice.png">
+- Midnight Apple <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/midnight_apple.png">
+- Crystal Apple <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/crystal_apple.png">
+- Black Cherry <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/black_cherry.png">
+- Experience Orb <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/experience_orb.png">
 #### Blocks:
 - Nylium farmland:
   - when crymson nylium or warped nylium is hoed and can be used as farmland for nether crops.
@@ -36,6 +41,7 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 - Enhanced Farmland:
   - created when a diamond hoe or better is used to till dirt, or on already made farmland (lets water run though it better) and grows crops 2x the speed.
   - gives reason to make better hoes (0_0)
+- Soul Flower <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/item/soul_Flower.png">
 #### Mobs:
 - Carbon Mob:
   - Small nether creature that breeds with diamond, drops a block of coal when it is fully grown and killed, but as an adult will drop(lay like a chicken) coal or charcoal periodically, dies instantly in lava or when caught on fire.
