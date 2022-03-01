@@ -6,7 +6,9 @@ import creep3rcrafter.overgrowth.Overgrowth;
 import creep3rcrafter.overgrowth.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -22,6 +24,15 @@ public class ModBlocks {
 	
 	public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block", 
 			() -> new Block(AbstractBlock.Properties.of(Material.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE).strength(2f)), ItemGroup.TAB_FOOD);
+	
+
+	public static final RegistryObject<SoulFarmland> SOUL_FARMLAND = registerBlock("soul_farmland", 
+			() -> new SoulFarmland(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(net.minecraft.block.Blocks.SOUL_SOI).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
+	public static final RegistryObject<SoulFarmland> NYLIUM_FARMLAND = registerBlock("nylium_farmland", 
+			() -> new SoulFarmland(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
+	
+	
+	
 	
 	
 	
