@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=1": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=2": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=3": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=4": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=5": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=6": {
+      "model": "overgrowth:block/nylium_farmland"
+    },
+    "moisture=7": {
+      "model": "overgrowth:block/nylium_farmland"
+    }
+  }
+}

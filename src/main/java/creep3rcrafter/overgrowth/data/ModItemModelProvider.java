@@ -15,9 +15,10 @@ public class ModItemModelProvider extends ItemModelProvider{
 	protected void registerModels() {
 		//withExistingParent("test_block", modLoc("block/test_block"));
 		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
-		builder(itemGenerated, "cherry");
+		itembuilder(itemGenerated, "cherry");
+		itembuilder(itemGenerated, "nether_carrot");
 	}
-	private ItemModelBuilder builder(ModelFile itemGenerated, String name) {
+	private ItemModelBuilder itembuilder(ModelFile itemGenerated, String name) {
 		return getBuilder(name).parent(itemGenerated).texture("layer0", "item/" + name);
 	}
 }

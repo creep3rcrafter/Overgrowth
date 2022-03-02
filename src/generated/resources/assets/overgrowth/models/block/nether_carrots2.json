@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "overgrowth:block/nether_carrots2"
+  }
+}

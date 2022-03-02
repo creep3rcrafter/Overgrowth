@@ -6,6 +6,7 @@ import creep3rcrafter.overgrowth.Overgrowth;
 import creep3rcrafter.overgrowth.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.FarmlandBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -27,13 +28,12 @@ public class ModBlocks {
 	
 
 	public static final RegistryObject<SoulFarmland> SOUL_FARMLAND = registerBlock("soul_farmland", 
-			() -> new SoulFarmland(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(net.minecraft.block.Blocks.SOUL_SOI).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
-	public static final RegistryObject<SoulFarmland> NYLIUM_FARMLAND = registerBlock("nylium_farmland", 
-			() -> new SoulFarmland(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
-	
-	
-	
-	
+			() -> new SoulFarmland(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6f).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
+	public static final RegistryObject<Block> NYLIUM_FARMLAND = registerBlock("nylium_farmland", 
+			() -> new NyliumFarmlandBlock(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
+
+	public static final RegistryObject<Block> NETHER_CARROTS = registerBlockWithoutItem("nether_carrots", 
+			() -> new NetherCarrotBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 	
 	
 	private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -46,10 +46,14 @@ public class ModBlocks {
 		registerBlockItem(name, toReturn, itemGroup);
 		return toReturn;
 	}
+	private static <T extends Block>RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block) {
+		RegistryObject<T> toReturn = BLOCKS.register(name, block);
+		return toReturn;
+	}
 	
 	private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
 		ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-				new Item.Properties().tab(ItemGroup.TAB_REDSTONE)));
+				new Item.Properties()));
 	}
 	private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, ItemGroup itemGroup) {
 		ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
