@@ -2,18 +2,14 @@ package creep3rcrafter.overgrowth.data;
 
 import creep3rcrafter.overgrowth.Overgrowth;
 import creep3rcrafter.overgrowth.block.ModBlocks;
-import creep3rcrafter.overgrowth.block.NetherCarrotBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.CarrotBlock;
+import net.minecraft.block.CropsBlock;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.ModelFile.ExistingModelFile;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.model.Models;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -24,13 +20,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		// simpleBlock(ModBlocks.TEST_BLOCK.get());
-
+		/*
 		getVariantBuilder(ModBlocks.NETHER_CARROTS.get()).forAllStates(state -> {
 			int i = cropAgeToIndex(state.getValue(NetherCarrotBlock.AGE));
 			return ConfiguredModel.builder()
 					.modelFile(models().crop("nether_carrots" + i, modLoc("block/nether_carrots" + i))).build();
 		});
-		
+		*/
+		cropBuilder("nether_carrots", ModBlocks.NETHER_CARROTS.get());
+		cropBuilder("nether_beetroots", ModBlocks.NETHER_BEETROOTS.get());
 		farmlandBuilder("nylium_farmland", ModBlocks.NYLIUM_FARMLAND.get());
 
 	}
@@ -45,10 +43,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		});
 	}
 	public VariantBlockStateBuilder cropBuilder(String name, Block block) {
-		return getVariantBuilder(ModBlocks.NETHER_CARROTS.get()).forAllStates(state -> {
-			int i = cropAgeToIndex(state.getValue(NetherCarrotBlock.AGE));
+		CropsBlock cropsBlock = (CropsBlock) block;
+		return getVariantBuilder(block).forAllStates(state -> {
+			int i = cropAgeToIndex(state.getValue(cropsBlock.AGE));
 			return ConfiguredModel.builder()
-					.modelFile(models().crop("nether_carrots" + i, modLoc("block/nether_carrots" + i))).build();
+					.modelFile(models().crop(name + i, modLoc("block/"+ name + i)))
+					.build();
 		});
 	}
 

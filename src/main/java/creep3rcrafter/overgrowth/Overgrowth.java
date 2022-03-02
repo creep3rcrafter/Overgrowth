@@ -39,5 +39,6 @@ public class Overgrowth {
 
 	private void clientSetup(final FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(ModBlocks.NETHER_CARROTS.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.NETHER_BEETROOTS.get(), RenderType.cutout());
 	}
 }

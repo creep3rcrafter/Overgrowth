@@ -17,6 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider{
 		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 		itembuilder(itemGenerated, "cherry");
 		itembuilder(itemGenerated, "nether_carrot");
+		itembuilder(itemGenerated, "nether_beetroot");
 	}
 	private ItemModelBuilder itembuilder(ModelFile itemGenerated, String name) {
 		return getBuilder(name).parent(itemGenerated).texture("layer0", "item/" + name);
