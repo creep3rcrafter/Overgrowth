@@ -1,6 +1,8 @@
 # Overgrowth
 <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/screenshot.png">
+
 ## About:
+
 Overgrowth is a mod that brings more life and diversity to the Overworld, Nether, and End.
 
 
@@ -21,7 +23,7 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
   - slightly better than an Overworld Carrot, and only grows in Nylium Farmland.
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
 - Nether Potato:
-  - slightly better than an Overworld Carrot, and only grows in Nylium Farmland.
+  - slightly better than an Overworld Carrot, and only grows in Nylium Farmland, poison Potato version heals instead of hurting
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
 - End Carrot:
   - slightly better than a Nether Carrot, and only grows in End Soil Farmland.
