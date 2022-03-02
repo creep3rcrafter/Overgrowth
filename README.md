@@ -1,4 +1,5 @@
 # Overgrowth
+<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/screenshot.png">
 ## About:
 Overgrowth is a mod that brings more life and diversity to the Overworld, Nether, and End.
 
