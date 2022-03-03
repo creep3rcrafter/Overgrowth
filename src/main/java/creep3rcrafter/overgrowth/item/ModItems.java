@@ -13,20 +13,38 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModItems {
 
 	// Ideas Fire(Ignis), luminous, Blistering, Scorching(ardore), Searing, Pyro,
-	// Sparking
-
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Overgrowth.MOD_ID);
+	// Sparking\
 	
-	public static RegistryObject<Item> TEST = ITEMS.register("test", 
-			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD)));
-	public static RegistryObject<Item> CHERRY = ITEMS.register("cherry", 
-			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_FOOD).food(Foods.CHERRY)));
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Overgrowth.MOD_ID);
 	
 	
 	public static RegistryObject<Item> NETHER_CARROT = ITEMS.register("nether_carrot", 
 			() -> new BlockNamedItem(ModBlocks.NETHER_CARROTS.get(), (new Item.Properties()).food(Foods.NETHER_CARROT).tab(ItemGroup.TAB_FOOD)));
+	
 	public static RegistryObject<Item> NETHER_BEETROOT = ITEMS.register("nether_beetroot", 
 			() -> new BlockNamedItem(ModBlocks.NETHER_BEETROOTS.get(), (new Item.Properties()).food(Foods.NETHER_BEETROOT).tab(ItemGroup.TAB_FOOD)));
+	
+	public static RegistryObject<Item> NETHER_POTATO = ITEMS.register("nether_potato", 
+			() -> new BlockNamedItem(ModBlocks.NETHER_POTATOS.get(), (new Item.Properties()).food(Foods.NETHER_POTATO).tab(ItemGroup.TAB_FOOD)));
+	
+
+	public static RegistryObject<Item> SULFUR_CANE_ITEM = ITEMS.register("sulfur_cane", 
+			() -> new BlockNamedItem(ModBlocks.SULFUR_CANE_BLOCK.get(), (new Item.Properties()).tab(ItemGroup.TAB_DECORATIONS)));
+	
+	
+	
+	//Items
+	public static RegistryObject<Item> NETHER_POISONOUS_POTATO = ITEMS.register("nether_poisonous_potato", 
+			() -> new Item(new Item.Properties().food(Foods.NETHER_POISONOUS_POTATO).tab(ItemGroup.TAB_FOOD)));
+
+	public static RegistryObject<Item> SULFUR = ITEMS.register("sulfur", 
+			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+
+	public static RegistryObject<Item> SOUL_PAPER = ITEMS.register("soul_paper", 
+			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+
+	public static RegistryObject<Item> SOUL_BOOK = ITEMS.register("soul_book", 
+			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
 
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

@@ -29,6 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		*/
 		cropBuilder("nether_carrots", ModBlocks.NETHER_CARROTS.get());
 		cropBuilder("nether_beetroots", ModBlocks.NETHER_BEETROOTS.get());
+		cropBuilder("nether_potatos", ModBlocks.NETHER_POTATOS.get());
 		farmlandBuilder("nylium_farmland", ModBlocks.NYLIUM_FARMLAND.get());
 
 	}

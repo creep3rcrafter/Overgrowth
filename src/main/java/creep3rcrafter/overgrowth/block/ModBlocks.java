@@ -32,6 +32,11 @@ public class ModBlocks {
 			() -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 	public static final RegistryObject<NetherCropBlock> NETHER_BEETROOTS = registerBlockWithoutItem("nether_beetroots", 
 			() -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+	public static final RegistryObject<NetherCropBlock> NETHER_POTATOS = registerBlockWithoutItem("nether_potatos", 
+			() -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+
+	public static final RegistryObject<SulfurCaneBlock> SULFUR_CANE_BLOCK = registerBlockWithoutItem("sulfur_cane_block", 
+			() -> new SulfurCaneBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 	
 	
 	

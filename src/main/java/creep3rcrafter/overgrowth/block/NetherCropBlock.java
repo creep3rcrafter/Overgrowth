@@ -38,7 +38,7 @@ public class NetherCropBlock extends CropsBlock {
 		return this.item.delegate.get(); // Forge: Vanilla caches the items, update with registry replacements.
 	}
 	@Override
-	protected boolean mayPlaceOn(BlockState blockState, IBlockReader blockReader, BlockPos blockPos) {
+	public boolean mayPlaceOn(BlockState blockState, IBlockReader blockReader, BlockPos blockPos) {
 		return blockState.is(ModBlocks.NYLIUM_FARMLAND.get());
 	}
 
