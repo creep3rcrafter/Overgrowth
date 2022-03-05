@@ -13,13 +13,19 @@ public class ModItemModelProvider extends ItemModelProvider{
 	}
 	@Override
 	protected void registerModels() {
-		//withExistingParent("test_block", modLoc("block/test_block"));
-		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
-		itembuilder(itemGenerated, "cherry");
-		itembuilder(itemGenerated, "nether_carrot");
-		itembuilder(itemGenerated, "nether_beetroot");
+		itembuilder("nether_carrot");
+		itembuilder("nether_beetroot_seeds");
+		itembuilder("nether_beetroot");
+		itembuilder("nether_potato");
+		itembuilder("nether_poisonous_potato");
+		itembuilder("baked_nether_potato");
+		itembuilder("soul_paper");
+		itembuilder("sulfur_cane");
+
+		withExistingParent("nylium_farmland", modLoc("block/nylium_farmland"));
 	}
-	private ItemModelBuilder itembuilder(ModelFile itemGenerated, String name) {
+	private ItemModelBuilder itembuilder(String name) {
+		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 		return getBuilder(name).parent(itemGenerated).texture("layer0", "item/" + name);
 	}
 }

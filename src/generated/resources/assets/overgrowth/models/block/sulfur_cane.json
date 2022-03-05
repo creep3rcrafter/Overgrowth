@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "overgrowth:block/sulfur_cane"
+  }
+}

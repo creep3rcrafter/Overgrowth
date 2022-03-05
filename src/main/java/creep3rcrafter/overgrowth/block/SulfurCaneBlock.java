@@ -6,19 +6,22 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.Minecraft;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.TickPriority;
+import net.minecraft.world.*;
 import net.minecraft.world.server.ServerWorld;
 
 public class SulfurCaneBlock extends Block implements net.minecraftforge.common.IPlantable {
@@ -31,7 +34,6 @@ public class SulfurCaneBlock extends Block implements net.minecraftforge.common.
 	}
 
 	public void tick(BlockState blockState, ServerWorld serverWorld, BlockPos blockPos, Random random) {
-		debug("tick");
 		if (!blockState.canSurvive(serverWorld, blockPos)) {
 			serverWorld.destroyBlock(blockPos, true);
 		}
@@ -61,11 +63,7 @@ public class SulfurCaneBlock extends Block implements net.minecraftforge.common.
 	public BlockState updateShape(BlockState blockState1, Direction direction, BlockState blockState2, IWorld world,
 			BlockPos blockPos1, BlockPos blockPos2) {
 		if (!blockState1.canSurvive(world, blockPos1)) {
-			//debug("b");
-			 //world.getBlockTicks().scheduleTick(blockPos1, this.asBlock(), world);
-			// blockState1.tick((ServerWorld) world, blockPos1, RANDOM);
 			world.destroyBlock(blockPos1, true);
-			 //world.getBlockTicks().scheduleTick(blockPos1, this, 1, TickPriority.VERY_HIGH);
 		}
 
 		return super.updateShape(blockState1, direction, blockState2, world, blockPos1, blockPos2);
@@ -91,24 +89,6 @@ public class SulfurCaneBlock extends Block implements net.minecraftforge.common.
 			}
 			return false;
 		}
-		/*
-		 * if (blockstate.getBlock() == this) {
-		 * Minecraft.getInstance().player.sendMessage(new StringTextComponent("2"),
-		 * Minecraft.getInstance().player.getUUID()); return true; } else {
-		 * Minecraft.getInstance().player.sendMessage(new StringTextComponent("3"),
-		 * Minecraft.getInstance().player.getUUID()); if
-		 * (blockstate.is(Blocks.SOUL_SAND) || blockstate.is(Blocks.SOUL_SOIL)) {
-		 * BlockPos blockpos = p_196260_3_.below();
-		 * Minecraft.getInstance().player.sendMessage(new StringTextComponent("3-1"),
-		 * Minecraft.getInstance().player.getUUID()); for (Direction direction :
-		 * Direction.Plane.HORIZONTAL) { FluidState fluidstate =
-		 * p_196260_2_.getFluidState(blockpos.relative(direction)); if
-		 * (fluidstate.is(FluidTags.LAVA)) {
-		 * Minecraft.getInstance().player.sendMessage(new StringTextComponent("3-2"),
-		 * Minecraft.getInstance().player.getUUID()); return true; } } }
-		 * Minecraft.getInstance().player.sendMessage(new StringTextComponent("4"),
-		 * Minecraft.getInstance().player.getUUID()); return false; }
-		 */
 	}
 
 	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> p_206840_1_) {
@@ -134,8 +114,13 @@ public class SulfurCaneBlock extends Block implements net.minecraftforge.common.
 		}
 		return isSoil && hasLava;
 	}
-	
-	public static void debug(String string) {// i know this is a stupid way to debug but its temporary
-		Minecraft.getInstance().player.sendMessage(new StringTextComponent(string), Minecraft.getInstance().player.getUUID());
+
+	public void entityInside(BlockState blockState, World world, BlockPos blockPos, Entity entity) {
+		if (entity instanceof LivingEntity && entity.getType() != EntityType.BLAZE) {
+			if (!world.isClientSide && (entity.xOld != entity.getX() || entity.zOld != entity.getZ())) {
+				entity.hurt(DamageSource.HOT_FLOOR, 1.0F);
+			}
+
+		}
 	}
 }

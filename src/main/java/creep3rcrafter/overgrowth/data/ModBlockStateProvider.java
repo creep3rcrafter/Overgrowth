@@ -2,6 +2,7 @@ package creep3rcrafter.overgrowth.data;
 
 import creep3rcrafter.overgrowth.Overgrowth;
 import creep3rcrafter.overgrowth.block.ModBlocks;
+import creep3rcrafter.overgrowth.block.SulfurCaneBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.CropsBlock;
 import net.minecraft.data.DataGenerator;
@@ -30,7 +31,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 		cropBuilder("nether_carrots", ModBlocks.NETHER_CARROTS.get());
 		cropBuilder("nether_beetroots", ModBlocks.NETHER_BEETROOTS.get());
 		cropBuilder("nether_potatos", ModBlocks.NETHER_POTATOS.get());
+
 		farmlandBuilder("nylium_farmland", ModBlocks.NYLIUM_FARMLAND.get());
+		caneBuilder("sulfur_cane", ModBlocks.SULFUR_CANE_BLOCK.get());
 
 	}
 	
@@ -49,6 +52,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 			int i = cropAgeToIndex(state.getValue(cropsBlock.AGE));
 			return ConfiguredModel.builder()
 					.modelFile(models().crop(name + i, modLoc("block/"+ name + i)))
+					.build();
+		});
+	}
+
+	public VariantBlockStateBuilder caneBuilder(String name, Block block) {
+		SulfurCaneBlock caneBlock = (SulfurCaneBlock) block;
+		return getVariantBuilder(block).forAllStates(state -> {
+			return ConfiguredModel.builder()
+					.modelFile(models().cross(name, modLoc("block/"+ name)))
 					.build();
 		});
 	}

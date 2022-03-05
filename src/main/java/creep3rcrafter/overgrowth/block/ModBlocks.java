@@ -22,9 +22,6 @@ public class ModBlocks {
 	
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Overgrowth.MOD_ID);
 	
-	public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block", 
-			() -> new Block(AbstractBlock.Properties.of(Material.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE).strength(2f)), ItemGroup.TAB_FOOD);
-	
 	public static final RegistryObject<Block> NYLIUM_FARMLAND = registerBlock("nylium_farmland", 
 			() -> new NyliumFarmlandBlock(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
 
@@ -32,7 +29,7 @@ public class ModBlocks {
 			() -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 	public static final RegistryObject<NetherCropBlock> NETHER_BEETROOTS = registerBlockWithoutItem("nether_beetroots", 
 			() -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-	public static final RegistryObject<NetherCropBlock> NETHER_POTATOS = registerBlockWithoutItem("nether_potatos", 
+	public static final RegistryObject<NetherCropBlock> NETHER_POTATOS = registerBlockWithoutItem("nether_potatos",
 			() -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).air().noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
 	public static final RegistryObject<SulfurCaneBlock> SULFUR_CANE_BLOCK = registerBlockWithoutItem("sulfur_cane_block", 
@@ -70,6 +67,5 @@ public class ModBlocks {
 	
 	public static void register(IEventBus eventBus) {
 		BLOCKS.register(eventBus);
-		//NETHER_CARROTS.get().setItem(ModItems.NETHER_CARROT.get());
 	}
 }

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "overgrowth:block/nether_potatos0"
+    },
+    "age=1": {
+      "model": "overgrowth:block/nether_potatos0"
+    },
+    "age=2": {
+      "model": "overgrowth:block/nether_potatos1"
+    },
+    "age=3": {
+      "model": "overgrowth:block/nether_potatos1"
+    },
+    "age=4": {
+      "model": "overgrowth:block/nether_potatos2"
+    },
+    "age=5": {
+      "model": "overgrowth:block/nether_potatos2"
+    },
+    "age=6": {
+      "model": "overgrowth:block/nether_potatos2"
+    },
+    "age=7": {
+      "model": "overgrowth:block/nether_potatos3"
+    }
+  }
+}

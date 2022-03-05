@@ -1,5 +1,5 @@
 # Overgrowth
-<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/screenshot.png">
+<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/2022-03-04_20.02.11.png">
 
 ## About:
 
@@ -8,9 +8,9 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 
 ### To Do:
 #### Items:
-- Sulfur cane:
+- Sulfur cane:<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/block/sulfur_cane.png">
   - it's like sugar cane but can be crafted into sulfur, or (soul paper) can only grow on soul sand next to lava and grows 2x slower than sugar cane.
-- Soul paper:
+- Soul paper:<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/soul_paper.png">
   - can be used for better enchantment books.
 - Dark Book:
   - when enchanted it returns better enchants than normal.
@@ -22,7 +22,7 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 - Nether Beetroot: <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/nether_beetroot.png">
   - slightly better than an Overworld Carrot, and only grows in Nylium Farmland.
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
-- Nether Potato:
+- Nether Potato: <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/nether_potato.png"> <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/baked_nether_potato.png"> <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/nether_poisonous_potato.png">
   - slightly better than an Overworld Carrot, and only grows in Nylium Farmland, poison Potato version heals instead of hurting
   - Lore: only grows in nylium Farmland because it is the only furtile soil in the nether it has adapted to the low moisture with more roots.
 - End Carrot:
@@ -40,7 +40,7 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 - Sanguis Fruit:
   - (Blood Fruit) potion component, When Eaten instantly heals 5 hearts.   
 #### Blocks:
-- Nylium farmland:
+- Nylium farmland:<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/block/nylium_farmland_top.png">
   - when crymson nylium or warped nylium is hoed and can be used as farmland for nether crops.
 - Soul Farmland:
   - when soul soil is hoed and lava is its water equivalent can only grow heat based plants.

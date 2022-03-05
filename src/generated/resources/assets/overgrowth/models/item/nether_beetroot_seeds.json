@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "overgrowth:item/cherry"
+    "layer0": "overgrowth:item/nether_beetroot_seeds"
   }
 }

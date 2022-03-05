@@ -21,21 +21,23 @@ public class ModItems {
 	public static RegistryObject<Item> NETHER_CARROT = ITEMS.register("nether_carrot", 
 			() -> new BlockNamedItem(ModBlocks.NETHER_CARROTS.get(), (new Item.Properties()).food(Foods.NETHER_CARROT).tab(ItemGroup.TAB_FOOD)));
 	
-	public static RegistryObject<Item> NETHER_BEETROOT = ITEMS.register("nether_beetroot", 
-			() -> new BlockNamedItem(ModBlocks.NETHER_BEETROOTS.get(), (new Item.Properties()).food(Foods.NETHER_BEETROOT).tab(ItemGroup.TAB_FOOD)));
+	public static RegistryObject<Item> NETHER_BEETROOT_SEEDS = ITEMS.register("nether_beetroot_seeds",
+			() -> new BlockNamedItem(ModBlocks.NETHER_BEETROOTS.get(), (new Item.Properties()).tab(ItemGroup.TAB_MATERIALS)));
 	
 	public static RegistryObject<Item> NETHER_POTATO = ITEMS.register("nether_potato", 
 			() -> new BlockNamedItem(ModBlocks.NETHER_POTATOS.get(), (new Item.Properties()).food(Foods.NETHER_POTATO).tab(ItemGroup.TAB_FOOD)));
-	
 
 	public static RegistryObject<Item> SULFUR_CANE_ITEM = ITEMS.register("sulfur_cane", 
 			() -> new BlockNamedItem(ModBlocks.SULFUR_CANE_BLOCK.get(), (new Item.Properties()).tab(ItemGroup.TAB_DECORATIONS)));
-	
-	
-	
-	//Items
+
+	public static RegistryObject<Item> NETHER_BEETROOT = ITEMS.register("nether_beetroot",
+			() -> new Item(new Item.Properties().food(Foods.NETHER_BEETROOT).tab(ItemGroup.TAB_FOOD)));
+
 	public static RegistryObject<Item> NETHER_POISONOUS_POTATO = ITEMS.register("nether_poisonous_potato", 
 			() -> new Item(new Item.Properties().food(Foods.NETHER_POISONOUS_POTATO).tab(ItemGroup.TAB_FOOD)));
+
+	public static RegistryObject<Item> BAKED_NETHER_POTATO = ITEMS.register("baked_nether_potato",
+			() -> new Item(new Item.Properties().food(Foods.BAKED_NETHER_POTATO).tab(ItemGroup.TAB_FOOD)));
 
 	public static RegistryObject<Item> SULFUR = ITEMS.register("sulfur", 
 			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
