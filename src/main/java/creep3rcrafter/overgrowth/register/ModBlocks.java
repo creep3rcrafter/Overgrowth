@@ -45,13 +45,8 @@ public class ModBlocks {
             () -> new SulfurCaneBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
 
-
-
-
-
-
-
-
+    public static final RegistryObject<ExperienceOrbBlock> EXPERIENCE_ORB_BLOCK = registerBlock("experience_orb_block",
+            () -> new ExperienceOrbBlock(AbstractBlock.Properties.of(Material.PLANT).instabreak().sound(SoundType.CROP)), ItemGroup.TAB_FOOD);
 
 
 

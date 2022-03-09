@@ -1,12 +1,12 @@
 # Overgrowth
-<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/2022-03-08_19.37.15.png">
+<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/2022-03-08_19.37.15">
 
 ## About:
 
 Overgrowth is a mod that brings more life and diversity to the Overworld, Nether, and End.
 
 <p align="left">
-<img src="https://media.giphy.com/media/qDGiXIL0htzZz9bV2i/giphy-downsized.gif">
+<img src="https://media.giphy.com/media/qDGiXIL0htzZz9bV2i/giphy.gif">
 </p>
 
 #### Items:
@@ -15,7 +15,7 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 <img src="https://media.giphy.com/media/WMoHiwTHsSrcExuXzM/giphy.gif">
 </p>
 
-- Sulfur cane:<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/block/sulfur_cane_block.png">
+- Sulfur cane:<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/block/sulfur_cane.png">
   - it's like sugar cane but can be crafted into sulfur, or (soul paper) can only grow on soul sand next to lava and grows 2x slower than sugar cane.
 - Soul paper:<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/src/main/resources/assets/overgrowth/textures/item/soul_paper.png">
   - can be used for better enchantment books.

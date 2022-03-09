@@ -126,6 +126,7 @@ dependencies {//name-appid:download
     implementation fg.deobf('curse.maven:curios-309927:3275653')
     implementation fg.deobf('curse.maven:jei-238222:3652153')
     implementation fg.deobf('curse.maven:top-245211:3665853')
+    implementation fg.deobf('curse.maven:worldedit-225608:3283693')
 }
 
 jar {
