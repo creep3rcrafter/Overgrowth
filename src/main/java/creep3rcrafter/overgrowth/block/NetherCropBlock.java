@@ -1,6 +1,6 @@
 package creep3rcrafter.overgrowth.block;
 
-import creep3rcrafter.overgrowth.item.ModItems;
+import creep3rcrafter.overgrowth.register.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;

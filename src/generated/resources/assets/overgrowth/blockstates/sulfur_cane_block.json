@@ -1,52 +1,52 @@
 {
   "variants": {
     "age=0": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=1": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=2": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=3": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=4": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=5": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=6": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=7": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=8": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=9": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=10": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=11": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=12": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=13": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=14": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     },
     "age=15": {
-      "model": "overgrowth:block/sulfur_cane"
+      "model": "overgrowth:block/sulfur_cane_block"
     }
   }
 }

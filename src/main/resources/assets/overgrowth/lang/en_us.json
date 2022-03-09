@@ -9,6 +9,8 @@
   "item.overgrowth.sulfur": "Sulfur",
   "item.overgrowth.soul_paper": "Soul Paper",
   "item.overgrowth.soul_book": "Soul Book",
-  
-  "block.overgrowth.nylium_farmland": "Nylium Farmland"
+
+  "block.overgrowth.nylium_farmland": "Nylium Farmland",
+  "block.overgrowth.live_soul_sand": "Live Soul Sand",
+  "entity.overgrowth.rising_block": "Rising Block"
 }

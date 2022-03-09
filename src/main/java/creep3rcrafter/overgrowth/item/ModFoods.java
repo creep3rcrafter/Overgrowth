@@ -4,7 +4,7 @@ import net.minecraft.item.Food;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class Foods {
+public class ModFoods {
 	public static final Food CHERRY = new Food.Builder().nutrition(1).saturationMod(0.3F).fast().build();
 	public static final Food NETHER_CARROT = new Food.Builder().nutrition(2).saturationMod(0.6F).build();
 	public static final Food NETHER_BEETROOT = new Food.Builder().nutrition(2).saturationMod(0.6F).build();
