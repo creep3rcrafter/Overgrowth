@@ -26,8 +26,10 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Overgrowth.MOD_ID);
 
-    public static final RegistryObject<Block> NYLIUM_FARMLAND = registerBlock("nylium_farmland",
+    public static final RegistryObject<NyliumFarmlandBlock> NYLIUM_FARMLAND = registerBlock("nylium_farmland",
             () -> new NyliumFarmlandBlock(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<SoulSoilFarmlandBlock> SOUL_SOIL_FARMLAND = registerBlock("soul_soil_farmland",
+            () -> new SoulSoilFarmlandBlock(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
 
     public static final RegistryObject<NetherCropBlock> NETHER_CARROTS = registerBlockWithoutItem("nether_carrots",
             () -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
@@ -45,8 +47,15 @@ public class ModBlocks {
             () -> new SulfurCaneBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
 
-    public static final RegistryObject<ExperienceOrbBlock> EXPERIENCE_ORB_BLOCK = registerBlock("experience_orb_block",
-            () -> new ExperienceOrbBlock(AbstractBlock.Properties.of(Material.PLANT).instabreak().sound(SoundType.CROP)), ItemGroup.TAB_FOOD);
+    public static final RegistryObject<XPPlantBlock> XP_PLANT_BLOCK = registerBlockWithoutItem("xp_plant",
+            () -> new XPPlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
+
+
+    public static final RegistryObject<XPStemBlock> XP_STEM_BLOCK = registerBlock("stem_block",
+            () -> new XPStemBlock(AbstractBlock.Properties.of(Material.PLANT).instabreak().sound(SoundType.CROP)), ItemGroup.TAB_FOOD);
+
+    public static final RegistryObject<XPBaulbBlock> EXPERIENCE_ORB_BLOCK = registerBlock("experience_orb_block",
+            () -> new XPBaulbBlock(AbstractBlock.Properties.of(Material.PLANT).instabreak().sound(SoundType.CROP)), ItemGroup.TAB_FOOD);
 
 
 

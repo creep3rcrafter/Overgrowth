@@ -1,41 +1,39 @@
 package creep3rcrafter.overgrowth.block;
 
 import creep3rcrafter.overgrowth.entity.RisingBlockEntity;
+import creep3rcrafter.overgrowth.register.ModBlocks;
+import creep3rcrafter.overgrowth.util.Utils;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.ExperienceOrbEntity;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.Explosion;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
 
-public class ExperienceOrbBlock extends RisingBlock {
+public class XPBaulbBlock extends RisingBlock {
+    private static final VoxelShape SHAPE = Block.box(2.0D, 2.0D, 2.0D, 14.0D, 14.0D, 14.0D);
 
-    public ExperienceOrbBlock(Properties properties) {
+    public XPBaulbBlock(Properties properties) {
         super(properties);
     }
 
-    public static boolean isFree(BlockState blockState) {
-        Material material = blockState.getMaterial();
-        return blockState.is(Blocks.AIR.getBlock()) || blockState.is(BlockTags.FIRE) || material.isLiquid() || material.isReplaceable();
-    }
-
-    public static boolean isStem(BlockState blockState) {
-        Material material = blockState.getMaterial();
-        return blockState.is(Blocks.DIRT.getBlock());//temp dirt but should be stem
+    @SuppressWarnings("deprecation")
+    public VoxelShape getShape(BlockState pState, IBlockReader pLevel, BlockPos pPos, ISelectionContext pContext) {
+        return SHAPE;
     }
 
     @SuppressWarnings("deprecation")
     public void onPlace(BlockState blockState, World world, BlockPos blockPos, BlockState blockState2, boolean p_220082_5_) {
-        world.getBlockTicks().scheduleTick(blockPos, this, this.getDelayAfterPlace() + 20);
+        world.getBlockTicks().scheduleTick(blockPos, this, this.getDelayAfterPlace() + 10);
     }
 
     @SuppressWarnings("deprecation")
@@ -49,8 +47,8 @@ public class ExperienceOrbBlock extends RisingBlock {
         if (!isStem(serverWorld.getBlockState(blockPos.below())) && blockPos.getY() >= 0) {//no Stem below
             if (!isFree(serverWorld.getBlockState(blockPos.above()))) {
                 //explode and drop xp
-                explode(serverWorld, blockPos, 2f);
-                dropXP(serverWorld, blockPos);
+                Utils.explode(serverWorld, blockPos, 2f);
+                Utils.dropXP(serverWorld, blockPos);
             } else {
                 //float
                 RisingBlockEntity risingBlockEntity =
@@ -64,20 +62,13 @@ public class ExperienceOrbBlock extends RisingBlock {
         }
     }
 
-    public void explode(World world, BlockPos blockPos) {
-        world.explode(null, blockPos.getX(), blockPos.getY(), blockPos.getZ(), 4.0F, true, Explosion.Mode.BREAK);
+    public static boolean isFree(BlockState blockState) {
+        Material material = blockState.getMaterial();
+        return blockState.is(Blocks.AIR.getBlock()) || blockState.is(BlockTags.FIRE) || material.isLiquid() || material.isReplaceable();
     }
 
-    public void explode(World world, BlockPos blockPos, float radius) {
-        world.explode(null, blockPos.getX(), blockPos.getY(), blockPos.getZ(), radius, true, Explosion.Mode.BREAK);
-    }
-
-    public void dropXP(World world, BlockPos blockPos) {
-        int i = 3 + world.random.nextInt(400) + world.random.nextInt(400);
-        while (i > 0) {
-            int j = ExperienceOrbEntity.getExperienceValue(i);
-            i -= j;
-            world.addFreshEntity(new ExperienceOrbEntity(world, blockPos.getX(), blockPos.getY(), blockPos.getZ(), j));
-        }
+    public static boolean isStem(BlockState blockState) {
+        Material material = blockState.getMaterial();
+        return blockState.is(ModBlocks.XP_STEM_BLOCK.get());
     }
 }

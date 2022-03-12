@@ -48,6 +48,12 @@ public class ModItems {
 	public static final RegistryObject<Item> SOUL_BOOK = ITEMS.register("soul_book",
 			() -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
 
+
+
+	public static final RegistryObject<Item> SOUL_FLOWER = ITEMS.register("soul_flower",
+			() -> new BlockNamedItem(ModBlocks.XP_PLANT_BLOCK.get(), (new Item.Properties()).tab(ItemGroup.TAB_FOOD)));
+
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}

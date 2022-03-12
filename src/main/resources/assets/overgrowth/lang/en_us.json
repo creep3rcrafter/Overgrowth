@@ -9,8 +9,14 @@
   "item.overgrowth.sulfur": "Sulfur",
   "item.overgrowth.soul_paper": "Soul Paper",
   "item.overgrowth.soul_book": "Soul Book",
+  "item.overgrowth.soul_flower": "Soul Flower",
 
   "block.overgrowth.nylium_farmland": "Nylium Farmland",
+  "block.overgrowth.soul_soil_farmland": "Soul Soil Farmland",
   "block.overgrowth.live_soul_sand": "Live Soul Sand",
+  "block.overgrowth.xp_plant": "Experience Plant",
+  "block.overgrowth.stem_block": "Experience Plant Stem",
+  "block.overgrowth.experience_orb_block": "Experience Plant Bulb",
+
   "entity.overgrowth.rising_block": "Rising Block"
 }

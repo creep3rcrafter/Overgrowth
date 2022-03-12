@@ -17,7 +17,6 @@ public class NetherCropBlock extends CropsBlock {
 			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
 			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 7.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
 			Block.box(0.0D, 0.0D, 0.0D, 16.0D, 9.0D, 16.0D) };
-	public Block placeableOn;
 	public Item item;
 
 	public NetherCropBlock(Properties properties) {
@@ -29,6 +28,7 @@ public class NetherCropBlock extends CropsBlock {
 		//return ModItems.NETHER_CARROT.get();
 		return item;
 	}
+
 	@Override
 	@SuppressWarnings("deprecation")
 	public Item asItem() {
@@ -37,6 +37,7 @@ public class NetherCropBlock extends CropsBlock {
 		}
 		return this.item.delegate.get(); // Forge: Vanilla caches the items, update with registry replacements.
 	}
+
 	@Override
 	public boolean mayPlaceOn(BlockState blockState, IBlockReader blockReader, BlockPos blockPos) {
 		return blockState.is(ModBlocks.NYLIUM_FARMLAND.get());
