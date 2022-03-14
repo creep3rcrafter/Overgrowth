@@ -1,0 +1,25 @@
+fix xp plant:
+    create specific entity that explodes once it gets too high instead of dropping it
+    create random blockstates for stems so that the plant is more diverse
+    create new textures for the plant
+    create model for the plant.
+    make the baulb react to comparitors
+    make stems and plant have a mini flower model when there is no stem or flower or baulb above it
+    fix hitbox on baulb
+    fix hitbox on plant
+
+
+Soul Soil Farmland:
+    create texture
+
+Make soul soil plant class
+Make soul Soil Grass
+
+Nether Crop:
+    change to nylium Crop class
+    remove connections to crop class(hopefully fix crops being able to be planted on normal farmland)
+
+Farmland Stuff:
+    make crimson nylium and warped nylium hoeable
+    make soul soil hoeable
+

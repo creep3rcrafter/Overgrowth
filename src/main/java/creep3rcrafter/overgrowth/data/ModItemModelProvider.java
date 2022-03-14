@@ -26,7 +26,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         itembuilder("nether_poisonous_potato");
         itembuilder("sulfur_cane");
         itembuilder("soul_paper");
-
+        itembuilder("dark_paper");
+        itembuilder("soul_book");
+        itembuilder("sulfur");
     }
 
     public static String name(Block block) {

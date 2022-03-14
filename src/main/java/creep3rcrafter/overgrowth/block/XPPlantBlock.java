@@ -6,6 +6,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -22,6 +23,7 @@ import net.minecraft.world.server.ServerWorld;
 import java.util.Random;
 
 public class XPPlantBlock extends CropsBlock {
+    public static final BooleanProperty CONNECTED = BooleanProperty.create("connected");
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
     public static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
@@ -113,7 +115,7 @@ public class XPPlantBlock extends CropsBlock {
         boolean isTrue = false;
         for (int i = 1; i < maxHeight; i++) {
             BlockState blockState = level.getBlockState(blockPos.above(i));
-            if (blockState.is(ModBlocks.EXPERIENCE_ORB_BLOCK.get())) {
+            if (blockState.is(ModBlocks.XP_BULB_BLOCK.get())) {
                 isTrue = true;
             }
         }
@@ -136,7 +138,7 @@ public class XPPlantBlock extends CropsBlock {
                     int chanceFlower = random.nextInt(10);
                     if (chanceFlower >= 8) {
                         if (isFree(level, blockPos.above(stemHeight(level, blockPos)))) {
-                            level.setBlock(blockPos.above(stemHeight(level, blockPos)), ModBlocks.EXPERIENCE_ORB_BLOCK.get().defaultBlockState(), 2);
+                            level.setBlock(blockPos.above(stemHeight(level, blockPos)), ModBlocks.XP_BULB_BLOCK.get().defaultBlockState(), 2);
                         }
                     } else {
                         if (isFree(level, blockPos.above(stemHeight(level, blockPos)))) {
@@ -151,7 +153,7 @@ public class XPPlantBlock extends CropsBlock {
             }
             if (stemHeight(level, blockPos) == 7) {//setflower no matter what on top
                 if (isFree(level, blockPos.above(stemHeight(level, blockPos)))) {
-                    level.setBlock(blockPos.above(7), ModBlocks.EXPERIENCE_ORB_BLOCK.get().defaultBlockState(), 2);
+                    level.setBlock(blockPos.above(7), ModBlocks.XP_BULB_BLOCK.get().defaultBlockState(), 2);
                 }
             }
         }else {//has flower
@@ -257,5 +259,6 @@ public class XPPlantBlock extends CropsBlock {
     @Override
     public void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(AGE);
+        blockBlockStateBuilder.add(CONNECTED);
     }
 }

@@ -36,7 +36,6 @@ public class Overgrowth {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 		eventBus.register(new EventHandler());
 		eventBus.register(new Commands());
-
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
@@ -44,6 +43,8 @@ public class Overgrowth {
 		RenderTypeLookup.setRenderLayer(ModBlocks.NETHER_BEETROOTS.get(), RenderType.cutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.NETHER_POTATOS.get(), RenderType.cutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.SULFUR_CANE_BLOCK.get(), RenderType.cutout());
+		RenderTypeLookup.setRenderLayer(ModBlocks.XP_PLANT_BLOCK.get(), RenderType.cutout());
+
 		RenderingRegistry.registerEntityRenderingHandler(ModEntities.RISING_BLOCK.get(), RisingBlockRenderer::new);
 	}
 }

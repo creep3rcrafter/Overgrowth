@@ -30,6 +30,14 @@ public class ModBlocks {
             () -> new NyliumFarmlandBlock(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
     public static final RegistryObject<SoulSoilFarmlandBlock> SOUL_SOIL_FARMLAND = registerBlock("soul_soil_farmland",
             () -> new SoulSoilFarmlandBlock(AbstractBlock.Properties.of(Material.DIRT).randomTicks().strength(0.6F).sound(SoundType.GRAVEL)), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<ActiveSoulSandBlock> LIVE_SOUL_SAND = registerBlock("live_soul_sand",
+            () -> new ActiveSoulSandBlock(14406560, AbstractBlock.Properties.of(Material.SAND, MaterialColor.COLOR_BROWN)
+                    .strength(0.5F).speedFactor(0.4F).sound(SoundType.SOUL_SAND)
+                    .isValidSpawn(ModBlocks::always).isRedstoneConductor(ModBlocks::always).isViewBlocking(ModBlocks::always)
+                    .lightLevel((val) -> {
+                        return 1;
+                    })
+                    .isSuffocating(ModBlocks::always).hasPostProcess(ModBlocks::always).emissiveRendering(ModBlocks::always)), ItemGroup.TAB_DECORATIONS);
 
     public static final RegistryObject<NetherCropBlock> NETHER_CARROTS = registerBlockWithoutItem("nether_carrots",
             () -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
@@ -38,34 +46,24 @@ public class ModBlocks {
     public static final RegistryObject<NetherCropBlock> NETHER_POTATOS = registerBlockWithoutItem("nether_potatos",
             () -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
-    public static final RegistryObject<ActiveSoulSandBlock> LIVE_SOUL_SAND = registerBlock("live_soul_sand",
-            () -> new ActiveSoulSandBlock(14406560, AbstractBlock.Properties.of(Material.SAND, MaterialColor.COLOR_BROWN)
-                    .strength(0.5F).speedFactor(0.4F).sound(SoundType.SOUL_SAND)
-                    .isValidSpawn(ModBlocks::always).isRedstoneConductor(ModBlocks::always).isViewBlocking(ModBlocks::always).isSuffocating(ModBlocks::always)), ItemGroup.TAB_DECORATIONS);
-
     public static final RegistryObject<SulfurCaneBlock> SULFUR_CANE_BLOCK = registerBlockWithoutItem("sulfur_cane_block",
             () -> new SulfurCaneBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
 
-
     public static final RegistryObject<XPPlantBlock> XP_PLANT_BLOCK = registerBlockWithoutItem("xp_plant",
-            () -> new XPPlantBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
-
-
+            () -> new XPPlantBlock(AbstractBlock.Properties.of(Material.PLANT).randomTicks().instabreak().sound(SoundType.CROP)));
     public static final RegistryObject<XPStemBlock> XP_STEM_BLOCK = registerBlock("stem_block",
             () -> new XPStemBlock(AbstractBlock.Properties.of(Material.PLANT).instabreak().sound(SoundType.CROP)), ItemGroup.TAB_FOOD);
-
-    public static final RegistryObject<XPBaulbBlock> EXPERIENCE_ORB_BLOCK = registerBlock("experience_orb_block",
+    public static final RegistryObject<XPBaulbBlock> XP_BULB_BLOCK = registerBlock("xp_bulb_block",
             () -> new XPBaulbBlock(AbstractBlock.Properties.of(Material.PLANT).instabreak().sound(SoundType.CROP)), ItemGroup.TAB_FOOD);
 
 
 
-    private static Boolean always(BlockState p_235437_0_, IBlockReader p_235437_1_, BlockPos p_235437_2_, EntityType<?> p_235437_3_) {
+    public static Boolean always(BlockState blockState, IBlockReader blockReader, BlockPos blockPos, EntityType<?> entityType) {
         return (boolean) true;
     }
-    private static boolean always(BlockState blockState, IBlockReader iBlockReader, BlockPos blockPos) {
+    public static boolean always(BlockState blockState, IBlockReader blockReader, BlockPos blockPos) {
         return (boolean) true;
     }
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

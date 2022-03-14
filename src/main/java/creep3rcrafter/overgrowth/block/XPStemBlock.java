@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.tags.FluidTags;
@@ -21,6 +22,7 @@ import net.minecraft.world.server.ServerWorld;
 import java.util.Random;
 
 public class XPStemBlock extends Block {
+    public static final BooleanProperty CONNECTED = BooleanProperty.create("connected");
     private static final VoxelShape SHAPE = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 15.0D, 10.0D);
 
     public XPStemBlock(Properties properties) {
@@ -52,6 +54,9 @@ public class XPStemBlock extends Block {
         }
         return false;
     }
+    public static Boolean somethingAbove (BlockState blockState){
+        return blockState.is(Blocks.AIR);
+    }
 
     public static boolean isStemOrPlant(BlockState blockState) {
         if (blockState.is(ModBlocks.XP_STEM_BLOCK.get())){
@@ -66,6 +71,6 @@ public class XPStemBlock extends Block {
     }
     @Override
     public void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> blockBlockStateBuilder) {
-        //blockBlockStateBuilder.add(AGE);
+        blockBlockStateBuilder.add(CONNECTED);
     }
 }
