@@ -17,7 +17,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 version = '1.0'
-group = 'creep3rcrafter.overgrowth' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'com.creep3rcrafter.overgrowth' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'overgrowth'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
