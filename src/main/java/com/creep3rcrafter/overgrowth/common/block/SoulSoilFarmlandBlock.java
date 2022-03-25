@@ -1,6 +1,6 @@
-package com.creep3rcrafter.overgrowth.block;
+package com.creep3rcrafter.overgrowth.common.block;
 
-import com.creep3rcrafter.overgrowth.util.NetherCropHelper;
+import com.creep3rcrafter.overgrowth.common.util.NetherCropHelper;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.BlockItemUseContext;

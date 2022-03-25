@@ -1,4 +1,4 @@
-package com.creep3rcrafter.overgrowth.block;
+package com.creep3rcrafter.overgrowth.common.block;
 
 import java.util.Random;
 

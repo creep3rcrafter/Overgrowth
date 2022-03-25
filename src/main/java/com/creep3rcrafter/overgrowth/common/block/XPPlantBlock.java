@@ -1,7 +1,7 @@
-package com.creep3rcrafter.overgrowth.block;
+package com.creep3rcrafter.overgrowth.common.block;
 
-import com.creep3rcrafter.overgrowth.register.ModBlocks;
-import com.creep3rcrafter.overgrowth.util.NetherCropHelper;
+import com.creep3rcrafter.overgrowth.common.register.ModBlocks;
+import com.creep3rcrafter.overgrowth.common.util.NetherCropHelper;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

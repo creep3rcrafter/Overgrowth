@@ -1,5 +1,6 @@
-package com.creep3rcrafter.overgrowth.block;
+package com.creep3rcrafter.overgrowth.common.block;
 
+import com.creep3rcrafter.creep3rcore.block.RisingBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BubbleColumnBlock;

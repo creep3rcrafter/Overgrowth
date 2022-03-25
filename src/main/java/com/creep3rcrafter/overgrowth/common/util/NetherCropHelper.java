@@ -1,7 +1,7 @@
-package com.creep3rcrafter.overgrowth.util;
+package com.creep3rcrafter.overgrowth.common.util;
 
-import com.creep3rcrafter.overgrowth.block.SoulSoilFarmlandBlock;
-import com.creep3rcrafter.overgrowth.register.ModBlocks;
+import com.creep3rcrafter.overgrowth.common.block.SoulSoilFarmlandBlock;
+import com.creep3rcrafter.overgrowth.common.register.ModBlocks;
 import com.google.common.base.Preconditions;
 import net.minecraft.block.*;
 import net.minecraft.state.IntegerProperty;

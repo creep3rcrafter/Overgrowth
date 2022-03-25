@@ -35,7 +35,7 @@ authors="Creep3rcrafter" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''This is the description.'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.overgrowth]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -47,10 +47,16 @@ description='''This is the description.'''
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.overgrowth]]
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
+    side="BOTH"
+[[dependencies.overgrowth]]
+    modId="creep3rcore"
+    mandatory=true
+    versionRange="[1.0,2.0)"
+    ordering="BEFORE"
     side="BOTH"

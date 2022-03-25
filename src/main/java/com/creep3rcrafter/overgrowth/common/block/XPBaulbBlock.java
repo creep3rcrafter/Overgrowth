@@ -1,8 +1,9 @@
-package com.creep3rcrafter.overgrowth.block;
+package com.creep3rcrafter.overgrowth.common.block;
 
-import com.creep3rcrafter.overgrowth.register.ModBlocks;
-import com.creep3rcrafter.overgrowth.entity.RisingBlockEntity;
-import com.creep3rcrafter.overgrowth.util.Utils;
+import com.creep3rcrafter.creep3rcore.block.RisingBlock;
+import com.creep3rcrafter.creep3rcore.entity.RisingBlockEntity;
+import com.creep3rcrafter.creep3rcore.util.Utils;
+import com.creep3rcrafter.overgrowth.common.register.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

@@ -1,16 +1,15 @@
 package com.creep3rcrafter.overgrowth;
 
-import com.creep3rcrafter.overgrowth.client.renderer.RisingBlockRenderer;
-import com.creep3rcrafter.overgrowth.register.ModBlocks;
-import com.creep3rcrafter.overgrowth.commands.Commands;
+import com.creep3rcrafter.creep3rcore.util.register.Register;
+import com.creep3rcrafter.overgrowth.common.register.ModBlocks;
+import com.creep3rcrafter.overgrowth.common.commands.Commands;
 import com.creep3rcrafter.overgrowth.common.EventHandler;
-import com.creep3rcrafter.overgrowth.register.ModEntities;
-import com.creep3rcrafter.overgrowth.register.ModItems;
+import com.creep3rcrafter.overgrowth.common.register.ModEntities;
+import com.creep3rcrafter.overgrowth.common.register.ModItems;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -23,9 +22,9 @@ public class Overgrowth {
 
 	public Overgrowth() {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		ModItems.register(eventBus);
-		ModBlocks.register(eventBus);
-		ModEntities.register(eventBus);
+		Register.register(eventBus, ModItems.ITEMS);
+		Register.register(eventBus, ModBlocks.BLOCKS);
+		Register.register(eventBus, ModEntities.ENTITY_TYPES);
 		eventBus.addListener(this::commonSetup);
 		eventBus.addListener(this::clientSetup);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -43,7 +42,5 @@ public class Overgrowth {
 		RenderTypeLookup.setRenderLayer(ModBlocks.NETHER_POTATOS.get(), RenderType.cutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.SULFUR_CANE_BLOCK.get(), RenderType.cutout());
 		RenderTypeLookup.setRenderLayer(ModBlocks.XP_PLANT_BLOCK.get(), RenderType.cutout());
-
-		RenderingRegistry.registerEntityRenderingHandler(ModEntities.RISING_BLOCK.get(), RisingBlockRenderer::new);
 	}
 }

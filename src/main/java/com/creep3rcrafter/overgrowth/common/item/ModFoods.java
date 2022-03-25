@@ -1,4 +1,4 @@
-package com.creep3rcrafter.overgrowth.item;
+package com.creep3rcrafter.overgrowth.common.item;
 
 import net.minecraft.item.Food;
 import net.minecraft.potion.EffectInstance;
