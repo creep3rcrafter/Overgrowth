@@ -1,5 +1,5 @@
 # Overgrowth
-<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/2022-03-08_19.37.15.png">
+<img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/Overgrowth%20Demo.png">
 
 ## About:
 
