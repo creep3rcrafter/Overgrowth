@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "overgrowth:soul_bottle"
+    },
+    {
+      "item": "overgrowth:dark_paper"
+    }
+  ],
+  "result": {
+    "item": "overgrowth:soul_paper"
+  }
+}

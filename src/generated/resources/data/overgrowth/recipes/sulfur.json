@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "overgrowth:sulfur_cane"
+    }
+  ],
+  "result": {
+    "item": "overgrowth:sulfur"
+  }
+}

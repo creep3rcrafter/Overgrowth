@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "overgrowth:sulfur_cane"
+    }
+  },
+  "result": {
+    "item": "overgrowth:dark_paper",
+    "count": 3
+  }
+}

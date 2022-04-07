@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.creep3rcrafter.overgrowth.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "overgrowth.mixin-refmap.json",
+  "client": [
+    "BlockLightEngineMixin",
+    "MinecraftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

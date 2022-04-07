@@ -8,9 +8,53 @@
   "item.overgrowth.sulfur_cane": "Sulfur Cane",
   "item.overgrowth.sulfur": "Sulfur",
   "item.overgrowth.soul_paper": "Soul Paper",
+  "item.overgrowth.dark_paper": "Soul Paper",
   "item.overgrowth.soul_book": "Soul Book",
   "item.overgrowth.soul_flower": "Soul Flower",
   "item.overgrowth.soul_bottle": "Bottle o' Soul",
+  "item.overgrowth.gloom_spawn_egg": "Gloom Spawn Egg",
+
+  "effect.overgrowth.luminous": "Luminous",
+  "item.minecraft.potion.effect.luminous": "Potion of Luminous",
+  "item.minecraft.splash_potion.effect.luminous": "Splash Potion of Luminous",
+  "item.minecraft.lingering_potion.effect.luminous": "Lingering Potion of Luminous",
+  "item.minecraft.tipped_arrow.effect.luminous": "Arrow of Luminous",
+
+  "effect.overgrowth.explosive": "Explosive",
+  "item.minecraft.potion.effect.explosive": "Potion of Explosive",
+  "item.minecraft.splash_potion.effect.explosive": "Splash Potion of Explosive",
+  "item.minecraft.lingering_potion.effect.explosive": "Lingering Potion of Explosive",
+  "item.minecraft.tipped_arrow.effect.explosive": "Arrow of Explosive",
+
+  "effect.overgrowth.thunderous": "Thunderous",
+  "item.minecraft.potion.effect.thunderous": "Potion of Thunderous",
+  "item.minecraft.splash_potion.effect.thunderous": "Splash Potion of Thunderous",
+  "item.minecraft.lingering_potion.effect.thunderous": "Lingering Potion of Thunderous",
+  "item.minecraft.tipped_arrow.effect.thunderous": "Arrow of Thunderous",
+
+  "effect.overgrowth.oxidation": "Oxidation",
+  "item.minecraft.potion.effect.oxidation": "Potion of Oxidation",
+  "item.minecraft.splash_potion.effect.oxidation": "Splash Potion of Oxidation",
+  "item.minecraft.lingering_potion.effect.oxidation": "Lingering Potion of Oxidation",
+  "item.minecraft.tipped_arrow.effect.oxidation": "Arrow of Oxidation",
+
+  "effect.overgrowth.nullifier": "Nullifier",
+  "item.minecraft.potion.effect.nullifier": "Potion of nullifier",
+  "item.minecraft.splash_potion.effect.nullifier": "Splash Potion of Nullifier",
+  "item.minecraft.lingering_potion.effect.nullifier": "Lingering Potion of Nullifier",
+  "item.minecraft.tipped_arrow.effect.nullifier": "Arrow of Nullifier",
+
+  "effect.overgrowth.revival": "Revival",
+  "item.minecraft.potion.effect.revival": "Potion of Revival",
+  "item.minecraft.splash_potion.effect.revival": "Splash Potion of Revival",
+  "item.minecraft.lingering_potion.effect.revival": "Lingering Potion of Revival",
+  "item.minecraft.tipped_arrow.effect.revival": "Arrow of Revival",
+
+  "effect.overgrowth.inversion": "Inversion",
+  "item.minecraft.potion.effect.inversion": "Potion of Inversion",
+  "item.minecraft.splash_potion.effect.inversion": "Splash Potion of Inversion",
+  "item.minecraft.lingering_potion.effect.inversion": "Lingering Potion of Inversion",
+  "item.minecraft.tipped_arrow.effect.inversion": "Arrow of Inversion",
 
   "block.overgrowth.nylium_farmland": "Nylium Farmland",
   "block.overgrowth.soul_soil_farmland": "Soul Soil Farmland",
@@ -19,5 +63,14 @@
   "block.overgrowth.stem_block": "Experience Plant Stem",
   "block.overgrowth.experience_orb_block": "Experience Plant Bulb",
 
-  "entity.overgrowth.rising_block": "Rising Block"
+  "entity.overgrowth.gloom": "Gloom",
+
+  "potion.potency.8": "VIII",
+  "potion.potency.9": "IX",
+  "potion.potency.10": "X",
+  "potion.potency.11": "XI",
+  "potion.potency.12": "XII",
+  "potion.potency.13": "XIII",
+  "potion.potency.14": "XIV",
+  "potion.potency.15": "XV"
 }

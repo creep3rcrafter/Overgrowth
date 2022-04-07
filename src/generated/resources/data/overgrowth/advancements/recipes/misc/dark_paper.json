@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "overgrowth:dark_paper"
+    ]
+  },
+  "criteria": {
+    "has_sulfur_reeds": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "overgrowth:sulfur_cane"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "overgrowth:dark_paper"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sulfur_reeds",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -23,3 +23,8 @@ Farmland Stuff:
     make crimson nylium and warped nylium hoeable
     make soul soil hoeable
 
+Live Soul Sand:
+    make it so when a non-monster entity dies on soul sand it is converted to Live Soul Sand
+    make it so you can right click soul sand with a bottle o soul to convert it to Live Soul Sand
+    make it so you can right click Live Soul Sand with a empty bottle to convert it to Soul Sand
+

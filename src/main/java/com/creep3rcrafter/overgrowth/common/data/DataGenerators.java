@@ -1,4 +1,4 @@
-package com.creep3rcrafter.overgrowth.data;
+package com.creep3rcrafter.overgrowth.common.data;
 
 import com.creep3rcrafter.overgrowth.Overgrowth;
 import net.minecraft.data.DataGenerator;
@@ -18,7 +18,9 @@ public class DataGenerators {
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 		ModItemModelProvider modItemModelProvider = new ModItemModelProvider(gen, existingFileHelper);
 		ModBlockStateProvider modBlockStateProvider = new ModBlockStateProvider(gen, existingFileHelper);
+		ModRecipeProvider modRecipeProvider = new ModRecipeProvider(gen);
 		gen.addProvider(modBlockStateProvider);
 		gen.addProvider(modItemModelProvider);
+		gen.addProvider(modRecipeProvider);
 	}
 }

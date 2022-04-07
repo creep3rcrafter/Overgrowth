@@ -1,4 +1,4 @@
-package com.creep3rcrafter.overgrowth.data;
+package com.creep3rcrafter.overgrowth.common.data;
 
 import com.creep3rcrafter.creep3rcore.util.data.CCBlockStateProvider;
 import com.creep3rcrafter.overgrowth.Overgrowth;

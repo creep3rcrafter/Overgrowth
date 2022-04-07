@@ -2,17 +2,20 @@ package com.creep3rcrafter.overgrowth.common.register;
 
 import com.creep3rcrafter.creep3rcore.util.register.Register;
 import com.creep3rcrafter.overgrowth.Overgrowth;
-import com.creep3rcrafter.overgrowth.block.*;
 import com.creep3rcrafter.overgrowth.common.block.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlocks {
+
+    public Items items;
+    public Block blocks;
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Overgrowth.MOD_ID);
 
@@ -28,7 +31,6 @@ public class ModBlocks {
                         return 1;
                     })
                     .isSuffocating(Register::always).hasPostProcess(Register::always).emissiveRendering(Register::always)), ItemGroup.TAB_DECORATIONS);
-
     public static final RegistryObject<NetherCropBlock> NETHER_CARROTS = Register.registerBlockWithoutItem(BLOCKS, "nether_carrots",
             () -> new NetherCropBlock(AbstractBlock.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP)));
     public static final RegistryObject<NetherCropBlock> NETHER_BEETROOTS = Register.registerBlockWithoutItem(BLOCKS, "nether_beetroots",
