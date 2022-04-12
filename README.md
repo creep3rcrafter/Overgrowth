@@ -1,6 +1,10 @@
 # Overgrowth
 <img src="https://github.com/creep3rcrafter/Overgrowth/blob/main/docs/images/Overgrowth%20Demo.png">
 
+## CODE:
+
+please dont steal my code :)
+
 ## About:
 
 VERY WIP
