@@ -3,7 +3,8 @@
 
 ## About:
 
-Overgrowth is a mod that brings more life and diversity to the Overworld, Nether, and End.
+VERY WIP
+Overgrowth is a mod that brings more life and diversity to the Overworld, Nether, and End. while also adding a new dimension and lots to explore
 
 <p align="left">
 <img src="https://media.giphy.com/media/qDGiXIL0htzZz9bV2i/giphy-downsized.gif">
@@ -65,12 +66,20 @@ Overgrowth is a mod that brings more life and diversity to the Overworld, Nether
 #### Mobs:
 - Carbon Mob:
   - Small nether creature that breeds with diamond, drops a block of coal when it is fully grown and killed, but as an adult will drop(lay like a chicken) coal or charcoal periodically, dies instantly in lava or when caught on fire.
+- Gloom
+  - litarally glows and not like the glow squid
+  - grows from a plant and also spawns in the overgrowth dimension
+- Overgrowth Mobs
+  - like their vanilla counterparts but overtaken with roots, fungi, plantlife  (zombie, creeper, skeleton... ...)
+  - they slowly regenerate as the plants put them back together
 #### Features:
 - Netherrack Water Absorption:
   - When water is placed in the nether it has a small chance to be absorbed by the netherrack and produce either crymson nylium or warped nylium.
   - The same thing can happen if a mob with moisture(blood) dies but some mobs won't cause it to happen(Enderman, Blaze, Skeleton, Zombie). 
   - Lore: nylium can only grow with moisture or soul energy and blood from dead creatures, that's why it's the only fertile soil in the nether.
-
+- Creep3rCore RisingBlock
+  - its only here till I set up that repository better 
+  - its the exact same as a falling block entity but floats up
 <p align="left">
 <img src="https://media.giphy.com/media/wUVnutpcbDPozt6m12/giphy.gif">
 </p>
